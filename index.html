@@ -12,10 +12,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#0a0a0a;--s:#161616;--s2:#202020;--s3:#2a2a2a;
-  --b:rgba(255,255,255,0.09);--b2:rgba(255,255,255,0.16);
-  --a:#e8ff47;--a2:#ff6b35;--t:#f0f0f0;--m:#777;--m2:#444;
-  --g:#4ade80;--am:#fbbf24;--red:#f87171;--blue:#60a5fa;
+  --bg:#050e08;--s:#0d1a10;--s2:#132016;--s3:#1a2c1e;
+  --b:rgba(74,222,128,0.13);--b2:rgba(74,222,128,0.25);
+  --a:#4ade80;--a2:#22c55e;--t:#e8f5ee;--m:#5a8a6a;--m2:#2e5040;
+  --g:#86efac;--am:#fbbf24;--red:#f87171;--blue:#60a5fa;
   --r:12px;--st:env(safe-area-inset-top,0px);--sb:env(safe-area-inset-bottom,0px)
 }
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
@@ -23,7 +23,7 @@ html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--t);font-f
 body{display:flex;flex-direction:column}
 
 /* ── SPLASH ── */
-#splash{position:fixed;inset:0;background:#0a0a0a;z-index:999;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 28px;padding-top:calc(48px + var(–st));gap:0}
+#splash{position:fixed;inset:0;background:#050e08;z-index:999;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 28px;padding-top:calc(48px + var(–st));gap:0}
 .sp-logo{font-family:‘Barlow Condensed’,sans-serif;font-size:12px;font-weight:900;letter-spacing:.22em;color:var(–a);text-transform:uppercase;margin-bottom:52px}
 .sp-q{font-family:‘Barlow Condensed’,sans-serif;font-size:36px;font-weight:900;line-height:1.05;text-align:center;color:var(–t);text-transform:uppercase;letter-spacing:.02em;margin-bottom:10px}
 .sp-q em{color:var(–a);font-style:normal}
@@ -53,7 +53,7 @@ body{display:flex;flex-direction:column}
 
 /* ── CARDS ── */
 .card{background:var(–s);border:1px solid var(–b);border-radius:var(–r);padding:15px;margin-bottom:10px}
-.card-accent{background:#141c00;border:1px solid rgba(232,255,71,.18);border-radius:var(–r);padding:15px;margin-bottom:10px;position:relative;overflow:hidden}
+.card-accent{background:#061208;border:1px solid rgba(74,222,128,.22);border-radius:var(–r);padding:15px;margin-bottom:10px;position:relative;overflow:hidden}
 .lbl{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(–m);margin-bottom:7px}
 .h2{font-family:‘Barlow Condensed’,sans-serif;font-size:22px;font-weight:800;line-height:1.1}
 .sub{font-size:13px;color:var(–m);margin-top:4px;line-height:1.45}
@@ -221,9 +221,9 @@ select.ifield{appearance:none;-webkit-appearance:none;text-align:left}
 .biglbl{font-size:12px;color:var(–m);margin-top:3px}
 
 /* ── PAGES (screen-within-screen) ── */
-.page{display:none;position:fixed;inset:0;background:var(–bg);z-index:100;flex-direction:column;overflow:hidden}
+.page{display:none;position:fixed;top:0;left:0;right:0;bottom:0;width:100%;height:100%;background:#050e08;z-index:500;flex-direction:column;overflow:hidden;-webkit-transform:translateZ(0);transform:translateZ(0)}
 .page.open{display:flex}
-.page-hdr{background:var(–bg);padding:14px 16px 10px;padding-top:calc(14px + var(–st));flex-shrink:0;border-bottom:1px solid var(–b);display:flex;align-items:center;gap:12px}
+.page-hdr{background:#050e08;padding:14px 16px 10px;padding-top:calc(14px + var(–st));flex-shrink:0;border-bottom:1px solid var(–b);display:flex;align-items:center;gap:12px}
 .page-back{background:var(–s2);border:1px solid var(–b);border-radius:8px;padding:7px 12px;font-size:13px;font-weight:700;color:var(–t);cursor:pointer;font-family:‘Barlow’,sans-serif;flex-shrink:0}
 .page-title{font-family:‘Barlow Condensed’,sans-serif;font-size:20px;font-weight:900;flex:1}
 .page-action{font-size:13px;font-weight:700;color:var(–a);background:none;border:none;cursor:pointer;font-family:‘Barlow’,sans-serif;flex-shrink:0}
